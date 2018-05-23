@@ -1,0 +1,730 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+/*end of css reset*/
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald-Regular.otf');
+}
+@font-face {
+    font-family: 'OswaldBold';
+    src: url('fonts/Oswald-Bold.otf');
+}
+@font-face {
+    font-family: 'OswaldLight';
+    src: url('fonts/Oswald-Light.otf');
+}
+@font-face {
+    font-family: 'Coneria';
+    src: url('fonts/Demo_ConeriaScript_2.ttf');
+}
+@font-face {
+    font-family: 'ConeriaSlanted';
+    src: url('fonts/Demo_ConeriaScript_Slanted_2.ttf');
+}
+body{
+    font-size: 0;
+    position: relative;
+}
+header .top{
+    background-color: #2f2f2f;
+}
+header .top .inner{
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0;
+}
+header .top .inner *{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+header .top .inner .left{
+    width: 30%;
+    display: inline-block;
+    color: #fedd00;
+    font-size: 11px;
+    cursor: pointer;
+    font-family: 'OswaldLight', sans-serif;    
+}
+header .top .inner .right{
+    width: 70%;
+    display: inline-block;
+    text-align: right;
+    color: #bababa;
+}
+header .top .inner .right li{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 11px;
+    cursor: pointer;
+    padding: 5px 20px;
+}
+header .top .inner .right li:first-of-type{
+    line-height: 31px;
+}
+header .top .inner .right li:hover{
+    background-color: #2a2a2a;
+}
+header .bottom{
+    background-color: #242424;
+    color: #fff;
+}
+header .bottom .inner{
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    text-align: right;
+    position: relative;
+}
+header .bottom .inner .logo{
+    position: absolute;
+    left: -20px;
+    top: 0px;
+    cursor: pointer;
+    z-index: 999;
+}
+header .bottom .inner li{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    margin: 20px 0px;
+    font-size: 17px;
+    font-family: 'OswaldBold', sans-serif;
+    border-right: 1px solid #000;
+}
+header .bottom .inner .borderless{
+    border: none;
+}
+header .bottom .inner li:hover{
+    color: #fedd00;
+}
+header .bottom .inner li img{
+    margin-bottom: 15px;
+    line-height: 27px;
+}
+.yellowBar{
+    background-color: #fedd00;
+}
+.yellowBar .inner{
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+.yellowBar .inner .left{
+    width: 90%;
+    display: inline-block;
+}
+.yellowBar .inner .left li{
+    font-size: 30px;
+    display: inline-block;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    font-family: 'OswaldBold', sans-serif;
+    position: relative;
+    border-left: 1px solid #da9500;
+    color: #da9500;
+    background: rgba(255,221,0,1);
+    background: -moz-linear-gradient(top, rgba(255,221,0,1) 0%, rgba(255,221,0,1) 48%, rgba(250,200,0,1) 51%, rgba(250,200,0,1) 52%, rgba(250,200,0,1) 53%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,221,0,1)), color-stop(48%, rgba(255,221,0,1)), color-stop(51%, rgba(250,200,0,1)), color-stop(52%, rgba(250,200,0,1)), color-stop(53%, rgba(250,200,0,1)));
+    background: -webkit-linear-gradient(top, rgba(255,221,0,1) 0%, rgba(255,221,0,1) 48%, rgba(250,200,0,1) 51%, rgba(250,200,0,1) 52%, rgba(250,200,0,1) 53%);
+    background: -o-linear-gradient(top, rgba(255,221,0,1) 0%, rgba(255,221,0,1) 48%, rgba(250,200,0,1) 51%, rgba(250,200,0,1) 52%, rgba(250,200,0,1) 53%);
+    background: -ms-linear-gradient(top, rgba(255,221,0,1) 0%, rgba(255,221,0,1) 48%, rgba(250,200,0,1) 51%, rgba(250,200,0,1) 52%, rgba(250,200,0,1) 53%);
+    background: linear-gradient(to bottom, rgba(255,221,0,1) 0%, rgba(255,221,0,1) 48%, rgba(250,200,0,1) 51%, rgba(250,200,0,1) 52%, rgba(250,200,0,1) 53%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdd00', endColorstr='#fac800', GradientType=0 );
+}
+.yellowBar .inner .left li:last-of-type{
+    border-right: 1px solid #da9500;
+}
+.yellowBar .inner .left li p{
+    font-size: 15px;
+    font-family: 'OswaldBold', sans-serif;
+    color: #da9500;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.yellowBar .inner .left .text{
+    font-size: 20px;
+    padding-left: 53px;
+    color: #da9500;
+    display: inline-block;
+    font-family: 'OswaldBold', sans-serif;
+    text-transform: uppercase;
+}
+.yellowBar .inner .right{
+    width: 10%;
+    max-width: 63px;
+    display: inline-block;
+    padding: 29px 0px;
+    box-sizing: border-box;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.yellowBar .inner .right:hover{
+    background-color: #e4a800;
+}
+.main{
+    font-size: 0;
+}
+.main img{
+    width: 100%;
+}
+.main .leftSide{
+/*    width: 44.39%;*/
+    display: inline-block;
+    vertical-align: top;
+}
+.main .leftSide .top{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.main .leftSide .top p{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 46.52px;
+    color: #fff;
+    font-family: 'Coneria', sans-serif;
+    line-height: 1.2;
+    z-index: 9;
+}
+.main .leftSide .top span{
+    font-family: 'Oswald', sans-serif;
+    font-size: 63.79px;
+    text-transform: uppercase;
+    z-index: 9;
+}
+.main .leftSide .top img{
+    transition: 0.5s;
+    max-width: 100%;
+}
+.main .leftSide .top:hover img{
+    transform: scale(1.05);
+}
+.main .leftSide .bottom{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.main .leftSide .bottom p{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 46.52px;
+    color: #fff;
+    font-family: 'Coneria', sans-serif;
+    line-height: 1.2;
+    z-index: 9;
+}
+.main .leftSide .bottom span{
+    font-family: 'Oswald', sans-serif;
+    font-size: 63.79px;
+    text-transform: uppercase;
+    z-index: 9;
+}
+.main .leftSide .bottom img{
+    transition: 0.5s;
+    max-width: 100%;
+}
+.main .leftSide .bottom:hover img{
+    transform: scale(1.05);
+}
+.main .rightSide{
+/*    width: 55.61%;*/
+    display: inline-block;
+    vertical-align: top;
+}
+.main .rightSide .topLeft{
+    width: 49.81%;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+} 
+.main .rightSide .topLeft p{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 46.52px;
+    color: #fff;
+    font-family: 'Coneria', sans-serif;
+    line-height: 1.2;
+    z-index: 9;
+}
+.main .rightSide .topLeft span{
+    font-family: 'Oswald', sans-serif;
+    font-size: 63.79px;
+    text-transform: uppercase;
+    z-index: 9;
+}
+.main .rightSide .topLeft img{
+    transition: 0.5s;
+    max-width: 100%;
+}
+.main .rightSide .topLeft:hover img{
+    transform: scale(1.05);
+}
+.main .rightSide .topRight{
+    width: 50.19%;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.main .rightSide .topRight p{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-size: 46.52px;
+    color: #fff;
+    font-family: 'Coneria', sans-serif;
+    line-height: 1.2;
+    z-index: 9;
+}
+.main .rightSide .topRight span{
+    font-family: 'Oswald', sans-serif;
+    font-size: 63.79px;
+    text-transform: uppercase;
+    z-index: 9;
+}
+.main .rightSide .topRight img{
+    transition: 0.5s;
+    max-width: 100%;
+}
+.main .rightSide .topRight:hover img{
+    transform: scale(1.05);
+}
+.main .rightSide .center{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.main .rightSide .center p{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    font-size: 46.52px;
+    color: #fff;
+    font-family: 'Coneria', sans-serif;
+    line-height: 1.2;
+    z-index: 9;
+}
+.main .rightSide .center span{
+    font-family: 'Oswald', sans-serif;
+    font-size: 63.79px;
+    text-transform: uppercase;
+    z-index: 9;
+}
+.main .rightSide .center img{
+    transition: 0.5s;
+    max-width: 100%;
+}
+.main .rightSide .center:hover img{
+    transform: scale(1.05);
+}
+.main .rightSide .bottom{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.main .rightSide .bottom p{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    font-size: 46.52px;
+    color: #fff;
+    font-family: 'Coneria', sans-serif;
+    line-height: 1.2;
+    z-index: 9;
+}
+.main .rightSide .bottom span{
+    font-family: 'Oswald', sans-serif;
+    font-size: 63.79px;
+    text-transform: uppercase;
+    z-index: 9;
+}
+.main .rightSide .bottom img{
+    transition: 0.5s;
+    max-width: 100%;
+}
+.main .rightSide .bottom:hover img{
+    transform: scale(1.05);
+}
+footer{
+    font-size: 0;
+}
+footer .advertise img{
+    cursor: pointer;
+}
+footer .support{
+    background-color: #343434;
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+footer .support .mainAd,
+footer .support .info{
+    text-align: left;
+}
+footer .support .lrt{
+    height: 100px;
+    margin: 20px 0px 0px 50px;
+    vertical-align: middle;
+}
+footer .support .carousel{
+    vertical-align: middle;
+}
+footer .support .carousel .carousel-inner li{
+    width: 300px;
+    height: 100px;
+    margin: 70px 15px 30px 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+footer .support .carousel .carousel-inner li img{
+    display: inline-block;
+}
+footer .support .inner li{
+    display: inline-block;
+    text-align: left;
+    font-size: 17px;
+    font-family: 'OswaldBold', sans-serif;
+    color: #fff;
+    vertical-align: middle;
+    text-transform: uppercase;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    margin: 45px 0px;
+}
+footer .support .inner li img{
+    width: 100%;
+}
+footer .support .inner .info{
+    border-left: 2px solid #000;
+}
+footer .copyright{
+    background-color: #000;
+}
+footer .copyright .inner{
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+footer .copyright .inner .left, 
+footer .copyright .inner .middle, 
+footer .copyright .inner .right{
+    width: 33.3%;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    vertical-align: middle;
+    font-family: 'Oswald', sans-serif;
+    margin: 15px 0px;
+}
+footer .copyright .inner .left img{
+    cursor: pointer;
+}
+footer .copyright .inner .middle{
+    text-align: center;
+}
+footer .copyright .inner .right{
+    text-align: right;
+}
+footer .copyright .inner .right img{
+    cursor: pointer;
+}
+.sandwich{
+    width: 30%;
+    display: none;
+    padding: 10px;
+}
+.sandwich img{
+    cursor: pointer;
+}
+.mobileMenu{
+    width: 50%;
+    height: auto;
+    position: absolute;
+    background-color: #2f2f2f;
+    top: 125px;
+    right: -300px;
+    transition: all 0.3s;
+    z-index: 1000;
+    display: none;
+}
+
+.mobileMenu li{
+    border-bottom: 1px solid #000;
+    padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+.mobileMenu li img{
+    margin-right: 10px;
+}
+.mobileMenu li:hover{
+    color: #fedd00;
+    background-color: #2f2f2f;
+}
+header .aboutFestivalLeadFoto{
+    background-image: url(images/about_festival.png);
+    background-position: top;
+    background-attachment: fixed;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+}
+header .aboutFestivalLeadFoto .inner{
+    width: 90%;;
+    margin: auto;
+    max-width: 1450px;
+}
+header .aboutFestivalLeadFoto .registrationBar{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #fedd00;
+    font-family: 'Oswald', sans-serif;
+    color: #da9500;
+    text-transform: uppercase;
+    font-size: 0;
+}
+header .aboutFestivalLeadFoto .registrationBar .left{
+    width: 70%;
+    display: inline-block;
+    text-align: left;
+    padding: 16px 75px 16px 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+header .aboutFestivalLeadFoto .registrationBar .right{
+    width: 30%;
+    display: inline-block;
+    text-align: right;
+    cursor: pointer;
+    padding-right: 20px;
+}
+header .aboutFestivalLeadFoto h1{
+    font-size: 46.52px;
+    font-family: 'Coneria', sans-serif;
+    padding-top: 140px;
+    padding-bottom: 130px;
+    line-height: 1.2;
+}
+header .aboutFestivalLeadFoto span{
+    font-size: 63.79px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+.aboutMain{
+    font-size: 16px;
+    color: #fff;
+    background-image: url(images/black_pattern.jpg);
+    background-size: cover;
+    overflow: auto;
+}
+.aboutMain .inner{
+    width: 90%;
+    max-width: 1450px;
+    margin: auto;
+    padding-top: 80px;
+}
+.aboutMain .inner .leftSide{
+    font-family: 'Oswald', sans-serif;
+    border-top: 4px solid #e4a800;
+    margin-right: 80px;
+}
+.aboutMain .inner .leftSide h2{
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.2;
+    padding-top: 25px;
+}
+.aboutMain .inner .rightSide{
+    font-family: 'OswaldLight', sans-serif;
+}
+.aboutMain .inner .rightSide p{
+    line-height: 1.5;
+    margin-bottom: 125px;
+}
+.aboutMain .inner .rightSide span{
+    font-family: 'Oswald', sans-serif;
+}
+.aboutMain .inner .rightSide ul h3{
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 30px;
+}
+.aboutMain .inner .rightSide ul{
+    margin-bottom: 275px;
+}
+.aboutMain .inner .rightSide ul li{
+    list-style: disc;
+    list-style-position: inside;
+    color: #e4a800;
+    border-top: 1px solid #7e7e7e;
+    padding: 20px 0px;
+    background-image: url(images/rodykle.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.aboutMain .inner .rightSide ul li:first-of-type{
+    border-top: 4px solid #e4a800;
+}
+.aboutMain .inner .rightSide ul li:last-of-type{
+    color: #fff;
+    background-image: inherit;
+}
+.aboutMain .inner .rightSide ul li a{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+footer .aboutCopyright{
+    background-color: #000;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    overflow: auto;
+}
+footer .aboutCopyright .inner{
+    width: 90%;
+    max-width: 1450px;
+    margin: auto;
+}
+footer .aboutCopyright .inner .left{
+    margin: 15px 0px 25px 0px;
+}
+footer .aboutCopyright .inner .right{
+    text-align: right;
+}
+footer .aboutCopyright .inner .right li{
+    display: inline-block;
+    line-height: 100px;
+    margin-right: 30px;
+}
+footer .aboutCopyright .inner .right li:last-of-type{
+    margin-right: 0px;
+}
+footer .aboutCopyright .inner .right li a{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+header .aboutTop{
+    height: 41px;
+    background-color: #4c4c4c;
+}
+@media all and (max-width: 1620px){
+    
+    footer .support{
+        text-align: center;
+    }
+}
+@media all and (min-width: 1480px){
+    footer .support .inner li{
+        display: inline-block;
+    }
+    footer .support .carousel{
+        display: none;
+    }
+    footer .support .mainAd,
+    footer .support .info,
+    footer .support .lrt{
+        display: none;
+    }
+}
+@media all and (max-width: 1480px){
+    footer .support .inner li{
+        display: none;
+    }
+    footer .support .carousel{
+        display: inline-block;
+    }
+    footer .support .mainAd,
+    footer .support .info,
+    footer .support .lrt{
+        display: inline-block;
+    }
+    
+    
+}
+@media (max-width: 768px){
+    .main .rightSide .topLeft,
+    .main .rightSide .topRight{
+        width: 100%;        
+    }
+    footer .support .lrt{
+        margin: 20px 0px 0px 10px;
+    }
+    footer .support .carousel .carousel-inner li{
+        margin: 70px 0px 30px 0px;
+    }
+    footer .aboutCopyright .inner{
+        width: 95%;
+    }
+}
